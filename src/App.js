@@ -10,17 +10,7 @@ function App() {
     <Router>
       {/* <div className="App"> */}
       <NavBar />
-      <header className="App-header">
-        <p>My new React Portfolio!</p>
-        <a
-          className="App-link"
-          href="https://myfyrefly.github.io/mejia-portfolio/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          See my Materialize Porfolio
-        </a>
-      </header>
+      <header className="App-header"></header>
       <Route exact path="/" component={About} />
       <Route exact path="/portfolio" component={Portfolio} />
       {/* <Route exact path="/contact" component={} /> */}
