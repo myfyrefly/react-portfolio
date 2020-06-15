@@ -10,6 +10,11 @@ function About() {
     maxHeight: 300,
   };
 
+  const aboutStyle = {
+    color: "white",
+    textShadow: "2px 2px black",
+  };
+
   return (
     <div>
       <Hero backgroundImage={Background}>
@@ -19,13 +24,13 @@ function About() {
       <Container style={{ marginTop: 30 }}>
         <div className="row">
           <div className="col-md-4">
-            <h1>About Me</h1>
+            <h1 style={aboutStyle}>About Me</h1>
             <img src={ProfilePic} alt="profile" style={style}></img>
           </div>
 
           <div className="col-md-6" style={{ padding: 50 }}>
             <p>
-              A former world traveler and teacher, now full stack web developer.
+              A former teacher and world traveler, now full stack web developer.
               I have an eye for making aesthetic designs for web applications
               and I really enjoy the satisfaction that comes with building an
               application from scratch. In the next phase of my professional

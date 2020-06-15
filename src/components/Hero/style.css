@@ -14,7 +14,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: black;
+  /* background: black;  this gives a kind of dimmness to the image, makes it easier to see white font on it.*/
 }
 
 .hero * {
@@ -24,7 +24,8 @@
 
 .hero h1,
 .hero h2 {
-  color: white;
+  color: #1d3cad;
+  text-shadow: 2px 2px #15b6df;
 }
 
 .hero h1 {
