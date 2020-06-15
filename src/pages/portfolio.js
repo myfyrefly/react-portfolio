@@ -77,7 +77,6 @@ const projectCards = () => {
     );
   };
 
-  //
   return (
     <div className="App">
       <Container>

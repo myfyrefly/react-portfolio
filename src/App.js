@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import About from "./pages/about";
 import Portfolio from "./pages/portfolio";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <NavBar />
       <Route exact path="/" component={About} />
       <Route exact path="/portfolio" component={Portfolio} />
-      {/* <Route exact path="/contact" component={} /> */}
+      <Route exact path="/contact" component={Contact} />
       {/* </div> */}
     </Router>
   );
