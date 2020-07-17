@@ -8,27 +8,27 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#2176AE",
+      main: "#2176ae",
     },
     secondary: {
-      main: "#FE6847",
+      main: "#fe6847",
     },
   },
   typography: {
     fontFamily: ["Lato", "sans serif"],
   },
-  overrides: {
-    // MuiToolbar: {
-    //   root: {
-    //     backgroundColor: "#88c7d0",
-    //   },
-    // },
-    MuiTypography: {
-      h2: {
-        color: "#e37656",
-      },
-    },
-  },
+  // overrides: {
+  //   MuiToolbar: {
+  //     root: {
+  //       backgroundColor: "#88c7d0",
+  //     },
+  //   },
+  //   MuiTypography: {
+  //     h2: {
+  //       color: "#e37656",
+  //     },
+  //   },
+  // },
 });
 
 ReactDOM.render(
