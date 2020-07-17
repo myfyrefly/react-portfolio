@@ -3,11 +3,39 @@ import ReactDOM from "react-dom";
 // import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#2176AE",
+    },
+    secondary: {
+      main: "#FE6847",
+    },
+  },
+  typography: {
+    fontFamily: ["Lato", "sans serif"],
+  },
+  overrides: {
+    // MuiToolbar: {
+    //   root: {
+    //     backgroundColor: "#88c7d0",
+    //   },
+    // },
+    MuiTypography: {
+      h2: {
+        color: "#e37656",
+      },
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
