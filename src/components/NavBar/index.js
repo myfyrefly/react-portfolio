@@ -1,56 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Tabs, Tab, AppBar } from "@material-ui/core";
+import About from "../../pages/about";
+import Portfolio from "../../pages/portfolio";
+import Contact from "../../pages/contact";
 import "./style.css";
 
-function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg" id="navStyle">
-      <Link className="navbar-brand" to="/">
-        Sofia Mejia
-      </Link>
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={
-                window.location.pathname === "/" ||
-                window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/portfolio"
-              className={
-                window.location.pathname === "/portfolio"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/contact"
-              className={
-                window.location.pathname === "/contact"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
-}
+const LookTabs = () => {
+  const [open, setOpen] = React.useState(false);
+  const [selectedTab, setSelectedTab] = React.useState(0);
 
-export default Navbar;
+  const handleChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
+  // const handleClose = (event, reason) => {
+  //   if (reason === "clickaway") {
+  //     return;
+  //   }
+  //   setOpen(false);
+  // };
+
+  return (
+    <>
+      <AppBar>
+        <Tabs position="static" value={selectedTab} onChange={handleChange}>
+          <Tab label="About" />
+          <Tab label="Portfolio" />
+          <Tab label="Contact" />
+        </Tabs>
+      </AppBar>
+      {selectedTab === 0 && <About setOpenToTrue={() => setOpen(true)} />}
+      {selectedTab === 1 && <Portfolio setOpenToTrue={() => setOpen(true)} />}
+      {selectedTab === 2 && <Contact setOpenToTrue={() => setOpen(true)} />}
+    </>
+  );
+};
+
+export default LookTabs;
