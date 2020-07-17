@@ -19,8 +19,8 @@ function About() {
   return (
     <div>
       <Hero backgroundImage={Background}>
-        <h1>Sofia Mejia</h1>
-        <h2>Full Stack Web Developer</h2>
+        <Typography variant="h1">Sofia Mejia</Typography>
+        <Typography variant="h4">Full Stack Web Developer</Typography>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <div className="row">
