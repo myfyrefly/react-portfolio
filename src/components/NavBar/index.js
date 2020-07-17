@@ -22,7 +22,7 @@ const LookTabs = () => {
 
   return (
     <>
-      <AppBar>
+      <AppBar position="static">
         <Tabs position="static" value={selectedTab} onChange={handleChange}>
           <Tab label="About" />
           <Tab label="Portfolio" />

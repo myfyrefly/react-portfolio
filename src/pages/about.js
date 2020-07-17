@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Background from "../assets/bg-img04.jpg";
 import ProfilePic from "../assets/my-profile.jpg";
+import { Typography } from "@material-ui/core";
 
 function About() {
   const style = {
@@ -10,10 +11,10 @@ function About() {
     maxHeight: 300,
   };
 
-  const aboutStyle = {
-    color: "white",
-    textShadow: "2px 2px black",
-  };
+  // const aboutStyle = {
+  //   color: "white",
+  //   textShadow: "2px 2px black",
+  // };
 
   return (
     <div>
@@ -24,7 +25,7 @@ function About() {
       <Container style={{ marginTop: 30 }}>
         <div className="row">
           <div className="col-md-4">
-            <h1 style={aboutStyle}>About Me</h1>
+            <h1>About Me</h1>
             <img src={ProfilePic} alt="profile" style={style}></img>
           </div>
 
