@@ -1,14 +1,16 @@
 import React from "react";
+import { Grid } from "@material-ui/core";
 import "./style.css";
 
 function Hero(props) {
   return (
-    <div
+    <Grid
+      container
       className="hero text-center"
       style={{ backgroundImage: `url(${props.backgroundImage})` }}
     >
       {props.children}
-    </div>
+    </Grid>
   );
 }
 

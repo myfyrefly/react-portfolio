@@ -14,7 +14,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  /* background: black;  this gives a kind of dimmness to the image, makes it easier to see white font on it.*/
+  /* background: grey; */
+  /* ^this gives a kind of dimmness to the image, makes it easier to see white font on it. */
 }
 
 .hero * {
