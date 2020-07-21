@@ -2,9 +2,17 @@ import React from "react";
 import Hero from "../components/Hero";
 import Background from "../assets/bg-img04.jpg";
 import ProfilePic from "../components/images/portfolioProfile.jpg";
-import { Typography, Grid, Box } from "@material-ui/core";
+import { Typography, Grid, Box, Divider } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    marginTop: "5%",
+  },
+});
 
 function About() {
+  const classes = useStyles();
   const style = {
     borderRadius: "10%",
     // display: "block",
@@ -14,28 +22,30 @@ function About() {
   };
 
   return (
-    <Grid>
+    <div>
       <Hero backgroundImage={Background}>
-        <Grid item xs={0} sm={6} container direction="column">
-          <Typography variant="h2">Sofia Mejia</Typography>
-          <Typography variant="h4">Full Stack Web Developer</Typography>
-          <Grid item>
-            <Box textAlign="center" fontSize="h6.fontSize">
-              I have an eye for making aesthetic frameworks for web applications
-              and a passion for learning. I earned my certificate in full stack
-              web development from the University of Texas at San Antonio where
-              I also excelled in Javascript, React, and CSS.
-            </Box>
+        {/* <Hero> */}
+        <Grid container className={classes.root}>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={0} sm={5} container direction="column">
+            <Typography variant="h2">Sofia Mejia</Typography>
+            <Typography variant="h4">Full Stack Web Developer</Typography>
+            <Divider />
+            <hr />
+            <Grid item>
+              <Box textAlign="center" fontSize="h5.fontSize">
+                I'm a full stack developer with an eye for making aesthetic
+                frameworks for web applications and a passion for learning.
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid item xs={0} sm={6}>
-          <img src={ProfilePic} alt="profile" style={style}></img>
+          <Grid item xs={0} sm={5}>
+            <img src={ProfilePic} alt="profile" style={style}></img>
+          </Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
       </Hero>
-      {/* <Grid item>
-        <Typography variant="h2">About Me</Typography>
-      </Grid> */}
-    </Grid>
+    </div>
   );
 }
 
