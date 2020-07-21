@@ -17,6 +17,13 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ["Lato", "sans serif"],
   },
+  overrides: {
+    MuiDivider: {
+      root: {
+        backgroundColor: "#000000",
+      },
+    },
+  },
   // overrides: {
   //   MuiToolbar: {
   //     root: {

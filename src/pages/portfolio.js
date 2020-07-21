@@ -1,8 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Container from "../components/Container";
+// import Container from "../components/Container";
 import Row from "../components/Row";
+import { Container } from "@material-ui/core";
 
 const cardStyle = {
   margin: 5,

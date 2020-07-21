@@ -3,7 +3,8 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
-import Container from "../components/Container";
+// import Container from "../components/Container";
+import { Container } from "@material-ui/core";
 
 function Contact() {
   return (
