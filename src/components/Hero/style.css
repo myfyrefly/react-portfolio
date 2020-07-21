@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   display: block;
   opacity: 0.4;
@@ -13,10 +13,10 @@
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  /* background: grey; */
-  /* ^this gives a kind of dimmness to the image, makes it easier to see white font on it. */
-}
+  right: 0; */
+/* background: grey; */
+/* ^this gives a kind of dimmness to the image, makes it easier to see white font on it. */
+/* } */
 
 .hero * {
   position: relative;
@@ -29,8 +29,8 @@
   text-shadow: 2px 2px #15b6df;
 }
 
-.hero h1 {
+/* .hero h1 {
   font-size: 60px;
   padding-top: 140px;
   margin-top: 0;
-}
+} */

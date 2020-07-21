@@ -9,26 +9,26 @@ function About() {
     borderRadius: "10%",
     // display: "block",
     marginTop: "5%",
-    // marginBottom: "auto",
+    marginBottom: "5%",
     width: "70%",
   };
 
   return (
     <Grid>
       <Hero backgroundImage={Background}>
-        <Grid item xs={6} container direction="column">
-          <Typography variant="h1">Sofia Mejia</Typography>
+        <Grid item xs={0} sm={6} container direction="column">
+          <Typography variant="h2">Sofia Mejia</Typography>
           <Typography variant="h4">Full Stack Web Developer</Typography>
           <Grid item>
             <Box textAlign="center" fontSize="h6.fontSize">
-              A former teacher and world traveler, now full stack web developer.
-              I have an eye for making aesthetic designs for web applications
-              and I really enjoy the satisfaction that comes with building an
-              application from scratch.
+              I have an eye for making aesthetic frameworks for web applications
+              and a passion for learning. I earned my certificate in full stack
+              web development from the University of Texas at San Antonio where
+              I also excelled in Javascript, React, and CSS.
             </Box>
           </Grid>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={0} sm={6}>
           <img src={ProfilePic} alt="profile" style={style}></img>
         </Grid>
       </Hero>
