@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   padding: 1rem;
   background-color: #2176ae;
   position: relative;
@@ -7,5 +7,5 @@
   /* left: 0; */
   /* width: 100%; */
   color: lightgray;
-  margin-top: auto;
+  /* margin-top: auto; */
 }

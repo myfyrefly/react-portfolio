@@ -28,12 +28,12 @@ function About() {
         <Grid container className={classes.root}>
           <Grid item xs={1}></Grid>
           <Grid item xs={0} sm={5} container direction="column">
-            <Typography variant="h2">Sofia Mejia</Typography>
-            <Typography variant="h4">Full Stack Web Developer</Typography>
+            <Typography variant="h1">Sofia Mejia</Typography>
+            <Typography variant="h3">Full Stack Web Developer</Typography>
             <Divider />
             <hr />
             <Grid item>
-              <Box textAlign="center" fontSize="h5.fontSize">
+              <Box textAlign="center" fontSize="h4.fontSize">
                 I'm a full stack developer with an eye for making aesthetic
                 frameworks for web applications and a passion for learning.
               </Box>
