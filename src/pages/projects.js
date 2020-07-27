@@ -1,16 +1,34 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-// import Container from "../components/Container";
-import Row from "../components/Row";
-import { Container, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import { Typography, Grid, Container } from "@material-ui/core";
 
-// const cardStyle = {
-//   margin: 5,
-// };
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
-const projectCards = () => {
+export default function Projects() {
+  const classes = useStyles();
+
   const cardInfo = [
+    {
+      image: "/images/PRITY.jpg",
+      title: "PRITY",
+      text:
+        "Prity is an interactive full-stack MERN app that allows users to browse real cosmetic products and test products virtually on a customizable avatar",
+      btnText: "Enhance Your Beauty",
+      link: "https://dry-savannah-54348.herokuapp.com/",
+    },
     {
       image: "/images/dreamstream.jpg",
       title: "dreamstream",
@@ -61,26 +79,39 @@ const projectCards = () => {
     },
   ];
 
-  const renderCard = (card, index) => {
+  const renderProject = (card, index) => {
     return (
-      <Card key={index}>
-        <Card.Img variant="top" src={card.image} key={index} />
-        <Card.Body>
-          <Card.Title>{card.title}</Card.Title>
-          <Card.Text>{card.text}</Card.Text>
-          <Button href={card.link} target="_blank" variant="primary">
+      <Card key={index} className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={card.image}
+            title="project screenshot"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {card.title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {card.text}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          {/* <Button size="small" color="primary">
+            Share
+          </Button> */}
+          <Button size="small" color="primary" href={card.link} target="_blank">
             {card.btnText}
           </Button>
-        </Card.Body>
+        </CardActions>
       </Card>
     );
   };
 
   return (
     <Container>
-      <Grid item>{cardInfo.map(renderCard)}</Grid>
+      <Grid item>{cardInfo.map(renderProject)}</Grid>
     </Container>
   );
-};
-
-export default projectCards;
+}

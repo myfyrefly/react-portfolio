@@ -1,7 +1,8 @@
 import React from "react";
 import { Tabs, Tab, AppBar } from "@material-ui/core";
 import About from "../../pages/about";
-import Portfolio from "../../pages/portfolio";
+// import Portfolio from "../../pages/portfolio";
+import Projects from "../../pages/projects";
 import Contact from "../../pages/contact";
 import "./style.css";
 
@@ -30,7 +31,8 @@ const LookTabs = () => {
         </Tabs>
       </AppBar>
       {selectedTab === 0 && <About setOpenToTrue={() => setOpen(true)} />}
-      {selectedTab === 1 && <Portfolio setOpenToTrue={() => setOpen(true)} />}
+      {/* {selectedTab === 1 && <Portfolio setOpenToTrue={() => setOpen(true)} />} */}
+      {selectedTab === 1 && <Projects setOpenToTrue={() => setOpen(true)} />}
       {selectedTab === 2 && <Contact setOpenToTrue={() => setOpen(true)} />}
     </>
   );

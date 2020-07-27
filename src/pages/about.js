@@ -26,7 +26,7 @@ function About() {
       <Hero backgroundImage={Background}>
         <Grid container className={classes.root}>
           <Grid item xs={1}></Grid>
-          <Grid item xs={0} sm={5} container direction="column">
+          <Grid item xs={false} sm={5} container direction="column">
             <Typography variant="h2">Sofia Mejia</Typography>
             <br />
             <Divider />
@@ -34,12 +34,12 @@ function About() {
             <Grid item>
               <Box textAlign="center" fontSize="h4.fontSize">
                 I'm a <strong>full stack web developer</strong> with an eye for
-                making aesthetic frameworks for web applications and a{" "}
+                creating aesthetic frameworks for web applications and a{" "}
                 <strong>passion for learning.</strong>
               </Box>
             </Grid>
           </Grid>
-          <Grid item xs={0} sm={5}>
+          <Grid item xs={false} sm={5}>
             <img src={ProfilePic} alt="profile" style={style}></img>
           </Grid>
           <Grid item xs={1}></Grid>

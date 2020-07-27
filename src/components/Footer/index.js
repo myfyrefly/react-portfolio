@@ -14,11 +14,16 @@ const Footer = () => {
         <Grid item>
           <a
             href="https://www.linkedin.com/in/sofia-mejia-344977a5/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <img src={LinkedInimg} alt="LinkedIn icon link" />
           </a>
-          <a href="https://twitter.com/myfyrefly" target="_blank">
+          <a
+            href="https://twitter.com/myfyrefly"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <img src={TwitterIcon} alt="Twitter icon link" />
           </a>
         </Grid>
