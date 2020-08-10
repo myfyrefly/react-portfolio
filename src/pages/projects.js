@@ -1,19 +1,20 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
+// import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import { Typography, Grid, Container } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    margin: "5%",
+    // maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 200,
   },
 });
 
@@ -22,12 +23,12 @@ export default function Projects() {
 
   const cardInfo = [
     {
-      image: "/images/PRITY.jpg",
+      image: "/projectImages/PRITY.jpg",
       title: "PRITY",
       text:
-        "Prity is an interactive full-stack MERN app that allows users to browse real cosmetic products and test products virtually on a customizable avatar",
-      btnText: "Enhance Your Beauty",
-      link: "https://dry-savannah-54348.herokuapp.com/",
+        "A MERN app that allows users to browse and test real cosmetic products virtually on a customizable avatar",
+      btnText: "enhance your beauty",
+      link: "https://shrouded-fjord-87134.herokuapp.com/dreamstream-home",
     },
     {
       image: "/images/dreamstream.jpg",
@@ -81,8 +82,8 @@ export default function Projects() {
 
   const renderProject = (card, index) => {
     return (
-      <Card key={index} className={classes.root}>
-        <CardActionArea>
+      <Grid item xs={12} sm={6}>
+        <Card key={index} className={classes.root} variant="outlined">
           <CardMedia
             className={classes.media}
             image={card.image}
@@ -96,22 +97,24 @@ export default function Projects() {
               {card.text}
             </Typography>
           </CardContent>
-        </CardActionArea>
-        <CardActions>
-          {/* <Button size="small" color="primary">
-            Share
-          </Button> */}
-          <Button size="small" color="primary" href={card.link} target="_blank">
-            {card.btnText}
-          </Button>
-        </CardActions>
-      </Card>
+          <CardActions>
+            <Button
+              size="small"
+              color="primary"
+              href={card.link}
+              target="_blank"
+            >
+              {card.btnText}
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     );
   };
 
   return (
-    <Container>
-      <Grid item>{cardInfo.map(renderProject)}</Grid>
-    </Container>
+    <Grid container spacing={2} alignItems="center">
+      {cardInfo.map(renderProject)}
+    </Grid>
   );
 }

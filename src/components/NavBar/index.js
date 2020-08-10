@@ -24,7 +24,12 @@ const LookTabs = () => {
   return (
     <>
       <AppBar position="static">
-        <Tabs position="static" value={selectedTab} onChange={handleChange}>
+        <Tabs
+          position="static"
+          value={selectedTab}
+          onChange={handleChange}
+          centered
+        >
           <Tab label="About" />
           <Tab label="Portfolio" />
           <Tab label="Contact" />
