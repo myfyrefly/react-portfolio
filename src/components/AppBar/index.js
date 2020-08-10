@@ -33,6 +33,9 @@ export default function NavAppBar() {
           <Link to="/projects" className={classes.linkStyle}>
             <Typography variant="h5">Projects</Typography>
           </Link>
+          <Link to="/connect" className={classes.linkStyle}>
+            <Typography variant="h5">Connect</Typography>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

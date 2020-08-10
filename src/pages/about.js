@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Background from "../assets/bg-img04.jpg";
-import ProfilePic from "../components/images/portfolioProfile.jpg";
+import ProfilePic from "../components/icons/portfolioProfile.jpg";
 import { Typography, Grid, Box, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
