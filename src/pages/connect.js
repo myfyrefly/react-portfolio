@@ -9,12 +9,11 @@ import Resume from "./pdf/MejiaDevResume.pdf";
 function Connect() {
   return (
     <Container>
-      <Typography>Resume</Typography>
       <embed
         src={Resume}
         type="application/pdf"
         width="100%"
-        height="100%"
+        height="500px"
       ></embed>
     </Container>
   );

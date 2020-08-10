@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-// import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -23,12 +22,12 @@ export default function Projects() {
 
   const cardInfo = [
     {
-      image: "/projectImages/PRITY.jpg",
+      image: "/images/prityApp.jpg",
       title: "PRITY",
       text:
         "A MERN app that allows users to browse and test real cosmetic products virtually on a customizable avatar",
       btnText: "enhance your beauty",
-      link: "https://shrouded-fjord-87134.herokuapp.com/dreamstream-home",
+      link: "https://dry-savannah-54348.herokuapp.com/",
     },
     {
       image: "/images/dreamstream.jpg",
