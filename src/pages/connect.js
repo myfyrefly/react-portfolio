@@ -4,17 +4,18 @@ import React from "react";
 // import InputGroup from "react-bootstrap/InputGroup";
 // import Button from "react-bootstrap/Button";
 import { Container, Typography } from "@material-ui/core";
+import Resume from "./pdf/MejiaDevResume.pdf";
 
 function Connect() {
   return (
     <Container>
       <Typography>Resume</Typography>
-      {/* <embed
-        src="./MejiaDevResume.pdf"
+      <embed
+        src={Resume}
         type="application/pdf"
         width="100%"
         height="100%"
-      ></embed> */}
+      ></embed>
     </Container>
   );
 }
