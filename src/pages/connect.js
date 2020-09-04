@@ -4,7 +4,7 @@ import React from "react";
 // import InputGroup from "react-bootstrap/InputGroup";
 // import Button from "react-bootstrap/Button";
 import { Container, Typography } from "@material-ui/core";
-import Resume from "./pdf/MejiaDevResume.pdf";
+import Resume from "./pdf/reactPortfolioResume.pdf";
 
 function Connect() {
   return (
